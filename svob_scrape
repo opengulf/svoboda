@@ -1,0 +1,12 @@
+images <- "/Users/djw12/Desktop/Svoboda_arabic.txt"
+SvobImages <- scan(images, what="", sep="\n")
+
+setwd("/Users/djw12/Desktop/SvobodaImages")
+library("jpeg")
+filea = "Svoboda_AR"
+fileb = ".jpg"
+
+for(ii in 1:length(SvobImages)){
+  destfile <- paste(filea, ii, fileb,sep="")
+  download.file(SvobImages[ii], destfile)
+}
